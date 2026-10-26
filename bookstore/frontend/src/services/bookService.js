@@ -1,6 +1,7 @@
 const BASE_URL = process.env.REACT_APP_API_URL || "https://bookstore-miwa15.vercel.app";
-const API_URL = `${BASE_URL}/api/books`;
-const AUTH_URL = BASE_URL;
+const API_BASE_URL = `${BASE_URL}/api`;
+const API_URL = `${API_BASE_URL}/books`;
+const AUTH_URL = API_BASE_URL;
 
 // =========================
 // HELPER: ส่ง JWT Token

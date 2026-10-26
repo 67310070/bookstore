@@ -304,7 +304,7 @@ app.post('/api/register', async (req, res) => {
             html: `
                 <h2>Email Verification</h2>
                 <p>กรุณาคลิกลิงก์ด้านล่างเพื่อยืนยันอีเมล</p>
-                <a href="http://localhost:${port}/api/verify?token=${verificationToken}">
+                <a href="https://bookstore-miwa15.vercel.app/api/verify?token=${verificationToken}">
                     Verify Email
                 </a>
             `
@@ -471,6 +471,10 @@ app.get(
 
 // ==================== START SERVER ====================
 
-app.listen(port, () => {
-    console.log(`Server has started on port ${port}`);
-});
+if (require.main === module) {
+    app.listen(port, () => {
+        console.log(`Server has started on port ${port}`);
+    });
+}
+
+module.exports = app;
