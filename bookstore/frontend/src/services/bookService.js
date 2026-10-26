@@ -1,5 +1,6 @@
-const API_URL = `${process.env.REACT_APP_API_URL || "http://localhost:4000/api"}/books`;
-const AUTH_URL = process.env.REACT_APP_API_URL || "https://bookstore-miwa15.vercel.app";
+const BASE_URL = process.env.REACT_APP_API_URL || "https://bookstore-miwa15.vercel.app";
+const API_URL = `${BASE_URL}/api/books`;
+const AUTH_URL = BASE_URL;
 
 // =========================
 // HELPER: ส่ง JWT Token
